@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoinMaxLifeMD | Earn Recurring Revenue Referring Patients to Telemedicine HRT &amp; Peptide Therapy</title>
+  <meta name="description" content="JoinMaxLifeMD — the affiliate program for chiropractors, gyms, trainers, and wellness pros. Earn $25-$50/patient/month in recurring commissions referring patients to physician-supervised HRT, peptide therapy, and weight loss. Free to join. Zero medical liability.">
+  <meta property="og:title" content="JoinMaxLifeMD | Earn Recurring Revenue Referring Patients to Telemedicine HRT &amp; Peptide Therapy">
+  <meta property="og:description" content="JoinMaxLifeMD — the affiliate program for chiropractors, gyms, trainers, and wellness pros. Earn $25-$50/patient/month in recurring commissions. Free to join. Zero medical liability.">
+  <meta property="og:image" content="https://joinmaxlifemd.com/og-image.jpg">
+  <meta property="og:url" content="https://joinmaxlifemd.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://joinmaxlifemd.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "JoinMaxLifeMD",
+    "description": "B2B affiliate partner program for MaxLifeMD telemedicine platform",
+    "url": "https://joinmaxlifemd.com",
+    "telephone": "",
+    "email": "affiliates@maxlifemdrx.com",
+    "areaServed": "US"
+  }
+  </script>
+  <style>
+    /* =============================================
+       CSS CUSTOM PROPERTIES
+    ============================================= */
+    :root {
+      --brand-navy: #1B4D6E;
+      --brand-navy-dark: #0D2B3E;
+      --brand-navy-light: #2A6F8E;
+      --accent-coral: #E8593C;
+      --accent-coral-light: #FEF0EC;
+      --accent-gold: #F4A623;
+      --bg-warm: #FAFAF8;
+      --card-white: #FFFFFF;
+      --text-primary: #1A2B3C;
+      --text-muted: #6B7C8D;
+      --border-light: #E8ECF0;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --transition: 0.25s ease;
+      --shadow-card: 0 2px 12px rgba(27,77,110,0.08);
+      --shadow-hover: 0 8px 28px rgba(27,77,110,0.15);
+      --radius-card: 12px;
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--card-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h1 { font-size: clamp(28px, 5vw, 36px); }
+    h2 { font-size: clamp(22px, 4vw, 28px); }
+    h3 { font-size: clamp(16px, 2.5vw, 18px); }
+
+    /* em in headings = coral accent, not italic */
+    h1 em, h2 em, h3 em {
+      color: var(--accent-coral);
+      font-style: normal;
+    }
+    /* Hero headings get gold em */
+    .hero h1 em { color: var(--accent-gold); }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-pad { padding: 80px 0; }
+    .section-pad-sm { padding: 60px 0; }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      white-space: nowrap;
+    }
+    .btn:hover { transform: scale(1.03); }
+    .btn-coral {
+      background: var(--accent-coral);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(232,89,60,0.35);
+    }
+    .btn-coral:hover { background: #d44e32; box-shadow: 0 6px 20px rgba(232,89,60,0.45); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+    .btn-lg { padding: 16px 36px; font-size: 16px; }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--brand-navy-dark);
+      transition: box-shadow var(--transition);
+    }
+    #navbar.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      padding: 0 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: var(--font-sans);
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--accent-gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-cta { margin-left: 8px; }
+    .nav-cta .btn { padding: 10px 20px; font-size: 14px; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--brand-navy-dark);
+      padding: 16px 24px 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .btn-coral { margin-top: 16px; border-radius: 8px; text-align: center; }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      background: linear-gradient(135deg, var(--brand-navy-dark) 0%, var(--brand-navy) 55%, var(--brand-navy-light) 100%);
+      padding: 140px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Dot pattern overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: clamp(30px, 5.5vw, 42px);
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.82);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .hero-stat {
+      flex: 1;
+      min-width: 160px;
+      padding: 20px 24px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-value {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: block;
+    }
+    .hero-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
+    /* Curved bottom */
+    .hero-curve {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: #fff;
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    /* =============================================
+       WHY JOIN
+    ============================================= */
+    #why-join { background: #fff; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 580px;
+      margin: 12px auto 0;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .trust-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 48px;
+    }
+    .trust-pill {
+      background: var(--accent-coral-light);
+      color: var(--accent-coral);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 100px;
+    }
+
+    /* =============================================
+       HOW IT WORKS
+    ============================================= */
+    #how-it-works { background: var(--bg-warm); }
+    .steps-row {
+      display: flex;
+      gap: 0;
+      position: relative;
+      align-items: flex-start;
+    }
+    .step {
+      flex: 1;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    /* Connector line */
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -4%;
+      width: 50%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-coral), rgba(232,89,60,0.3));
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-coral);
+      color: #fff;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 14px rgba(232,89,60,0.35);
+    }
+    .step h3 { margin-bottom: 10px; }
+    .step p { color: var(--text-muted); font-size: 14px; }
+
+    /* =============================================
+       COMMISSION TIERS
+    ============================================= */
+    #earnings { background: #fff; }
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .tier-card {
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 32px 28px;
+      position: relative;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .tier-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .tier-card.featured {
+      border: 2px solid var(--accent-coral);
+      box-shadow: 0 8px 32px rgba(232,89,60,0.15);
+    }
+    .tier-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-coral);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .tier-name {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .tier-rate {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--brand-navy);
+      line-height: 1;
+    }
+    .tier-rate span { font-size: 18px; color: var(--text-muted); font-family: var(--font-sans); font-weight: 400; }
+    .tier-sub { color: var(--text-muted); font-size: 13px; margin: 4px 0 20px; }
+    .tier-divider { height: 1px; background: var(--border-light); margin: 20px 0; }
+    .tier-features { display: flex; flex-direction: column; gap: 10px; }
+    .tier-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .tier-feature::before {
+      content: '✓';
+      color: var(--accent-coral);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tier-cta { margin-top: 24px; display: block; text-align: center; }
+
+    /* =============================================
+       EARNINGS CALCULATOR
+    ============================================= */
+    #calculator { background: var(--bg-warm); }
+    .calc-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 40px 40px 36px;
+      box-shadow: var(--shadow-card);
+    }
+    .calc-slider-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .calc-slider-label span:first-child { font-size: 15px; font-weight: 600; }
+    .calc-patient-count {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--brand-navy);
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: var(--border-light);
+      border-radius: 3px;
+      outline: none;
+      margin-bottom: 32px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      background: var(--accent-coral);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(232,89,60,0.4);
+      border: 3px solid #fff;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      background: var(--accent-coral);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(232,89,60,0.4);
+      border: 3px solid #fff;
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .calc-result {
+      background: var(--bg-warm);
+      border-radius: 10px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .calc-result-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 6px; }
+    .calc-result-value {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--brand-navy);
+    }
+    .calc-tier-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: var(--accent-coral-light);
+      border-radius: 8px;
+      padding: 12px 20px;
+    }
+    .calc-tier-name { font-weight: 700; color: var(--accent-coral); font-size: 15px; }
+    .calc-tier-rate { font-size: 14px; color: var(--text-muted); }
+
+    /* =============================================
+       WHO PARTNERS WITH US
+    ============================================= */
+    #partners {
+      background: linear-gradient(135deg, var(--brand-navy-dark), var(--brand-navy));
+      position: relative;
+      overflow: hidden;
+    }
+    #partners::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+    #partners .section-header h2 { color: #fff; }
+    #partners .section-header h2 em { color: var(--accent-gold); }
+    #partners .section-header p { color: rgba(255,255,255,0.7); }
+    .partner-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .partner-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-2px);
+    }
+    .partner-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .partner-card h3 { color: #fff; margin-bottom: 6px; }
+    .partner-card p { color: rgba(255,255,255,0.65); font-size: 14px; }
+
+    /* =============================================
+       WHAT'S INCLUDED
+    ============================================= */
+    #included { background: #fff; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 40px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .feature-check {
+      width: 26px;
+      height: 26px;
+      background: var(--accent-coral-light);
+      color: var(--accent-coral);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .feature-text strong { font-size: 15px; font-weight: 600; display: block; margin-bottom: 2px; }
+    .feature-text span { font-size: 13px; color: var(--text-muted); }
+
+    /* =============================================
+       TESTIMONIALS
+    ============================================= */
+    #testimonials { background: var(--bg-warm); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .testimonial-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .testimonial-quote {
+      font-size: 42px;
+      color: var(--accent-coral);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--text-primary);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-stars { color: var(--accent-gold); font-size: 14px; margin-bottom: 12px; }
+    .testimonial-author strong { font-size: 14px; font-weight: 700; display: block; }
+    .testimonial-author span { font-size: 13px; color: var(--text-muted); }
+
+    /* =============================================
+       FAQ
+    ============================================= */
+    #faq { background: #fff; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--card-white);
+      gap: 16px;
+      transition: background var(--transition);
+    }
+    .faq-question:hover { background: var(--bg-warm); }
+    .faq-question.open { background: var(--bg-warm); color: var(--brand-navy); }
+    .faq-icon {
+      width: 22px;
+      height: 22px;
+      background: var(--border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: background var(--transition), transform var(--transition);
+    }
+    .faq-question.open .faq-icon {
+      background: var(--accent-coral);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       APPLICATION FORM
+    ============================================= */
+    #apply { background: var(--bg-warm); }
+    .form-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 44px 44px 40px;
+      box-shadow: var(--shadow-card);
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .form-group label .req { color: var(--accent-coral); }
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 15px;
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background: var(--card-white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--brand-navy-light);
+      box-shadow: 0 0 0 3px rgba(42,111,142,0.12);
+    }
+    textarea.form-control { resize: vertical; min-height: 80px; }
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .form-check input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: var(--accent-coral);
+      cursor: pointer;
+    }
+    .form-check label { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .form-success-icon { font-size: 48px; margin-bottom: 16px; }
+    .form-success h3 { color: var(--brand-navy); margin-bottom: 10px; font-family: var(--font-serif); font-size: 24px; }
+    .form-success p { color: var(--text-muted); font-size: 15px; }
+    .form-trust-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+    .form-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .form-trust-item::before {
+      content: '✓';
+      color: var(--accent-coral);
+      font-weight: 700;
+    }
+    .form-trust-sep {
+      color: var(--border-light);
+      font-size: 18px;
+    }
+
+    /* =============================================
+       FINAL CTA
+    ============================================= */
+    #final-cta {
+      background: linear-gradient(135deg, var(--brand-navy-dark), var(--brand-navy));
+      text-align: center;
+      padding: 80px 24px;
+    }
+    #final-cta h2 { color: #fff; font-size: clamp(24px, 4vw, 32px); margin-bottom: 16px; }
+    #final-cta h2 em { color: var(--accent-gold); }
+    #final-cta p { color: rgba(255,255,255,0.75); font-size: 16px; max-width: 560px; margin: 0 auto 36px; }
+    .final-cta-secondary { margin-top: 20px; color: rgba(255,255,255,0.6); font-size: 14px; }
+    .final-cta-secondary a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+    .final-cta-secondary a:hover { color: #fff; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--brand-navy-dark);
+      padding: 48px 0 32px;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .footer-logo {
+      font-family: var(--font-sans);
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-logo span { color: var(--accent-gold); }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 28px 0; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-copy { font-size: 13px; }
+    .footer-disclaimer {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      max-width: 680px;
+      line-height: 1.5;
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+      .partner-cards { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 120px 0 80px; }
+      .hero-stat { min-width: 130px; }
+      .steps-row { flex-direction: column; gap: 32px; align-items: center; }
+      .step { max-width: 320px; }
+      .step:not(:last-child)::after { display: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .tiers-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .partner-cards { grid-template-columns: 1fr 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 28px 20px; }
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .calc-wrapper { padding: 28px 20px; }
+      .calc-results { grid-template-columns: 1fr 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; }
+      .section-pad { padding: 60px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { flex-direction: column; }
+      .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+      .hero-stat:last-child { border-bottom: none; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .partner-cards { grid-template-columns: 1fr; }
+      .calc-results { grid-template-columns: 1fr; }
+      .trust-row { flex-direction: column; align-items: center; }
+      .form-trust-bar { flex-direction: column; align-items: center; }
+      .form-trust-sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Join<span>MaxLifeMD</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#why-join">Why Join</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#earnings">Earnings</a></li>
+        <li><a href="#partners">Partner Types</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#apply" class="btn btn-coral">Apply Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="menu">
+      <a href="#why-join" role="menuitem">Why Join</a>
+      <a href="#how-it-works" role="menuitem">How It Works</a>
+      <a href="#earnings" role="menuitem">Earnings</a>
+      <a href="#partners" role="menuitem">Partner Types</a>
+      <a href="#faq" role="menuitem">FAQ</a>
+      <a href="#apply" class="btn btn-coral" role="menuitem">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <span class="hero-badge">B2B Partner Program</span>
+      <h1 id="hero-heading">Turn your practice into a <em>revenue engine</em></h1>
+      <p class="hero-sub">Refer patients to board-certified telemedicine doctors for HRT, peptide therapy, and weight loss. You earn recurring commissions. We handle all medical, compliance, and pharmacy.</p>
+      <div class="hero-ctas">
+        <a href="#apply" class="btn btn-coral btn-lg">Apply Now</a>
+        <a href="#why-join" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+      <div class="hero-stats" role="list" aria-label="Program highlights">
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-value">47 States</span>
+          <div class="hero-stat-label">Nationwide Coverage</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-value">$8,400+</span>
+          <div class="hero-stat-label">Avg. Partner Earnings/Year</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-value">Zero</span>
+          <div class="hero-stat-label">Medical Liability</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-curve" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================================================
+       WHY JOIN
+  ============================================================ -->
+  <section id="why-join" class="section-pad" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="why-heading">Why partner with <em>JoinMaxLifeMD</em></h2>
+        <p>Help your patients thrive while you build a sustainable new revenue stream — backed by physician-supervised telehealth you can trust.</p>
+      </div>
+      <div class="cards-grid" role="list">
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">💰</span>
+          <h3>Recurring Revenue, Not One-Time Fees</h3>
+          <p>Earn competitive monthly commissions on every active patient — not just a one-time referral bonus. As patients refill prescriptions and continue care, you earn. Month after month. No cap on earnings.</p>
+        </article>
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">🏥</span>
+          <h3>Physician-Supervised, HIPAA-Compliant Care</h3>
+          <p>Every patient is evaluated by a board-certified telemedicine physician. All consultations are HIPAA-secure. All prescriptions are clinically appropriate and at the sole discretion of the prescribing provider. Your reputation is protected.</p>
+        </article>
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">✅</span>
+          <h3>Zero Inventory, Zero Liability, Zero Hassle</h3>
+          <p>You never touch a medication, manage a shipment, or handle patient records. JoinMaxLifeMD manages all medical consultations, pharmacy fulfillment, prescription management, and ongoing patient monitoring. You simply refer.</p>
+        </article>
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">💊</span>
+          <h3>FDA-Registered, U.S.-Based Compounding Pharmacy</h3>
+          <p>All medications are sourced from FDA-registered, U.S.-based compounding pharmacies. Patients receive pharmaceutical-grade treatments with full regulatory compliance. Quality your patients can trust and you can stand behind.</p>
+        </article>
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">📦</span>
+          <h3>Full Marketing Toolkit — Print &amp; Digital</h3>
+          <p>Receive co-branded flyers, posters, business cards, QR codes, social media templates, email copy, and a custom landing page — all designed to make referrals effortless. We even ship physical materials to your office.</p>
+        </article>
+        <article class="card" role="listitem">
+          <span class="card-icon" aria-hidden="true">🤝</span>
+          <h3>Dedicated Affiliate Success Team</h3>
+          <p>You're not alone. Every partner gets personalized onboarding, compliance training, performance reporting, and a dedicated point of contact. We help you optimize campaigns and grow your earnings over time.</p>
+        </article>
+      </div>
+      <div class="trust-row" role="list" aria-label="Trust signals">
+        <span class="trust-pill" role="listitem">47 states covered</span>
+        <span class="trust-pill" role="listitem">Board-certified physicians</span>
+        <span class="trust-pill" role="listitem">FDA-registered pharmacy</span>
+        <span class="trust-pill" role="listitem">HIPAA-compliant platform</span>
+        <span class="trust-pill" role="listitem">LegitScript approved</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section id="how-it-works" class="section-pad" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="how-heading">Three steps. <em>Zero hassle.</em></h2>
+        <p>Getting started takes minutes. Earning takes no extra effort after that.</p>
+      </div>
+      <div class="steps-row" role="list">
+        <div class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Apply &amp; Get Approved</h3>
+          <p>Complete a 2-minute application. We verify your business and activate your custom referral dashboard within 48 hours.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Share Your Link With Patients</h3>
+          <p>Use your custom referral link, QR code, or co-branded materials in your office, texts, emails, and social media.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Get Paid Monthly — Forever</h3>
+          <p>Earn $25–$50 per patient per month, every month they stay subscribed. No caps. No clawbacks. Real recurring revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMMISSION TIERS
+  ============================================================ -->
+  <section id="earnings" class="section-pad" aria-labelledby="tiers-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="tiers-heading">Partner tiers &amp; <em>earnings</em></h2>
+        <p>Start earning from day one and automatically move into higher tiers as your referrals grow.</p>
+      </div>
+      <div class="tiers-grid" role="list">
+        <!-- Starter -->
+        <article class="tier-card" role="listitem">
+          <div class="tier-name">Starter</div>
+          <div class="tier-rate">$25<span>/patient/mo</span></div>
+          <div class="tier-sub">0–10 active patients</div>
+          <div class="tier-divider"></div>
+          <ul class="tier-features">
+            <li class="tier-feature">Custom referral link &amp; QR code</li>
+            <li class="tier-feature">Digital marketing kit</li>
+            <li class="tier-feature">Partner dashboard access</li>
+            <li class="tier-feature">Monthly payouts (NET-30)</li>
+          </ul>
+          <a href="#apply" class="btn btn-coral tier-cta">Get Started</a>
+        </article>
+        <!-- Pro (Featured) -->
+        <article class="tier-card featured" role="listitem">
+          <div class="tier-badge">Most Popular</div>
+          <div class="tier-name">Pro</div>
+          <div class="tier-rate">$35<span>/patient/mo</span></div>
+          <div class="tier-sub">11–50 active patients</div>
+          <div class="tier-divider"></div>
+          <ul class="tier-features">
+            <li class="tier-feature">$100 bonus per 10th referral</li>
+            <li class="tier-feature">Co-branded landing page</li>
+            <li class="tier-feature">Physical marketing kit shipped to you</li>
+            <li class="tier-feature">Bi-monthly payouts (NET-15)</li>
+          </ul>
+          <a href="#apply" class="btn btn-coral tier-cta">Get Started</a>
+        </article>
+        <!-- Elite -->
+        <article class="tier-card" role="listitem">
+          <div class="tier-name">Elite</div>
+          <div class="tier-rate">$50<span>/patient/mo</span></div>
+          <div class="tier-sub">51+ active patients</div>
+          <div class="tier-divider"></div>
+          <ul class="tier-features">
+            <li class="tier-feature">$250 bonus per 25th referral</li>
+            <li class="tier-feature">Full co-branded experience</li>
+            <li class="tier-feature">Dedicated account manager</li>
+            <li class="tier-feature">Weekly payouts (NET-7)</li>
+          </ul>
+          <a href="#apply" class="btn btn-coral tier-cta">Get Started</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EARNINGS CALCULATOR
+  ============================================================ -->
+  <section id="calculator" class="section-pad" aria-labelledby="calc-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="calc-heading">Calculate your <em>earnings</em></h2>
+        <p>See how much you could earn based on the number of patients you refer.</p>
+      </div>
+      <div class="calc-wrapper">
+        <div class="calc-slider-label">
+          <span>Referred patients</span>
+          <span class="calc-patient-count" id="patient-count">20</span>
+        </div>
+        <input
+          type="range"
+          id="patient-slider"
+          min="1"
+          max="100"
+          value="20"
+          aria-label="Number of referred patients"
+          aria-valuemin="1"
+          aria-valuemax="100"
+          aria-valuenow="20"
+        >
+        <div class="calc-results">
+          <div class="calc-result">
+            <div class="calc-result-label">Monthly Earnings</div>
+            <div class="calc-result-value" id="monthly-earnings">$700</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-label">Annual Earnings</div>
+            <div class="calc-result-value" id="annual-earnings">$8,400</div>
+          </div>
+        </div>
+        <div class="calc-tier-info">
+          <span class="calc-tier-name" id="calc-tier-name">Pro Tier</span>
+          <span class="calc-tier-rate" id="calc-tier-rate">$35 per patient / month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHO PARTNERS WITH US
+  ============================================================ -->
+  <section id="partners" class="section-pad" aria-labelledby="partners-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="partners-heading">Who partners <em>with us</em></h2>
+        <p style="color:rgba(255,255,255,0.7)">JoinMaxLifeMD is built for wellness professionals who already have the patient relationships — and want to add a meaningful new revenue stream.</p>
+      </div>
+      <div class="partner-cards" role="list">
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">🦴</span>
+          <h3>Chiropractors</h3>
+          <p>Add HRT &amp; peptides to your recovery toolkit</p>
+        </article>
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">🏋️</span>
+          <h3>Gym Owners</h3>
+          <p>Help members break through plateaus</p>
+        </article>
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">💪</span>
+          <h3>Personal Trainers</h3>
+          <p>Offer what supplements can't</p>
+        </article>
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">✨</span>
+          <h3>Med Spas</h3>
+          <p>Layer HRT into your anti-aging menu</p>
+        </article>
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">🌿</span>
+          <h3>Wellness Coaches</h3>
+          <p>Back your guidance with real medicine</p>
+        </article>
+        <article class="partner-card" role="listitem">
+          <span class="partner-icon" aria-hidden="true">🏃</span>
+          <h3>Physical Therapists</h3>
+          <p>Accelerate patient recovery timelines</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHAT'S INCLUDED
+  ============================================================ -->
+  <section id="included" class="section-pad" aria-labelledby="included-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="included-heading">Everything you need to <em>succeed</em></h2>
+        <p>Every partner gets the full toolkit to start referring and earning on day one.</p>
+      </div>
+      <div class="features-grid" role="list">
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>High-converting landing pages</strong>
+            <span>Custom-branded to your business for seamless patient handoffs</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>Plug-and-play marketing materials</strong>
+            <span>Print-ready flyers, posters, digital templates, and QR codes</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>Lifetime recurring commissions</strong>
+            <span>Earn every month a patient remains active — no clawbacks, no caps</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>HIPAA-compliant, doctor-led telemedicine</strong>
+            <span>Board-certified physicians handle all consultations and prescriptions</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>No inventory, no liability, no hassle</strong>
+            <span>Zero medical or operational responsibilities on your end</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>Dedicated affiliate support team</strong>
+            <span>Personalized onboarding and a dedicated point of contact</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>Real-time referral tracking dashboard</strong>
+            <span>Monitor clicks, sign-ups, active patients, and monthly earnings</span>
+          </div>
+        </div>
+        <div class="feature-item" role="listitem">
+          <div class="feature-check" aria-hidden="true">✓</div>
+          <div class="feature-text">
+            <strong>Co-branded patient experience</strong>
+            <span>Your patients see your branding throughout their care journey</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section id="testimonials" class="section-pad" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="testimonials-heading">Partners are <em>earning</em></h2>
+        <p>Real results from wellness professionals who joined the JoinMaxLifeMD partner program.</p>
+      </div>
+      <div class="testimonials-grid" role="list">
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-quote" aria-hidden="true">&ldquo;</div>
+          <p class="testimonial-text">This partnership has been a game changer. I've got members finally losing fat after years of frustration. And as a gym owner, I've added thousands in passive revenue.</p>
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <div class="testimonial-author">
+            <strong>Coach Joe</strong>
+            <span>Gym Owner</span>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-quote" aria-hidden="true">&ldquo;</div>
+          <p class="testimonial-text">My chiropractic patients were already asking about peptides for inflammation and recovery. Now I have a compliant, doctor-supervised way to connect them with real treatment — and I earn for every referral.</p>
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <div class="testimonial-author">
+            <strong>Dr. Martinez</strong>
+            <span>Chiropractor, NJ</span>
+          </div>
+        </article>
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-quote" aria-hidden="true">&ldquo;</div>
+          <p class="testimonial-text">I was skeptical at first, but the onboarding was so easy. Within two weeks I had my first three referrals. MaxLifeMD handles everything — I just share the link.</p>
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <div class="testimonial-author">
+            <strong>Sarah K.</strong>
+            <span>Wellness Coach, FL</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="faq" class="section-pad" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="faq-heading">Frequently asked <em>questions</em></h2>
+        <p>Everything you need to know before applying to the JoinMaxLifeMD partner program.</p>
+      </div>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            Do I need a medical license to be an affiliate?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              No. You are referring patients to MaxLifeMD's licensed telemedicine doctors. You never prescribe, diagnose, or treat. Your role is simply to share information and connect patients to our platform.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            What does MaxLifeMD handle?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Everything medical: telemedicine consultations with board-certified physicians, lab ordering and review, prescription management, compounding pharmacy fulfillment, medication shipping, and ongoing patient monitoring. You handle zero of it.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            How much can I realistically earn?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              With 20 active referred patients at the Pro tier ($35/patient/month), you'd earn $700/month or $8,400/year in recurring passive income. Top partners with 50+ patients earn $2,500+/month.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            What treatments can my patients access?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              GLP-1 weight loss (semaglutide, tirzepatide), NAD+ therapy, testosterone optimization, hormone replacement therapy, peptide protocols (BPC-157, Sermorelin, CJC-1295/Ipamorelin), sexual health, and sleep optimization. All physician-supervised.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            Is there any cost to become an affiliate?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              No. The program is completely free to join. We provide all marketing materials, your custom referral dashboard, and ongoing support at no cost.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            What about compliance and liability?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              MaxLifeMD maintains all medical licenses, HIPAA compliance, and malpractice insurance. As an affiliate, you have zero medical liability. You're sharing information about a telemedicine service — the same way you might recommend a nutritionist or specialist.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            How do I get paid?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Commissions are paid monthly via direct deposit or PayPal. You can track all referrals and earnings in real-time through your partner dashboard.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false">
+            Can I be an affiliate if I'm outside NJ/NY/FL?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Yes! MaxLifeMD serves patients in 47 states. While our initial affiliate recruitment focuses on NJ, NY, and FL, we welcome partners from any state.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       APPLICATION FORM
+  ============================================================ -->
+  <section id="apply" class="section-pad" aria-labelledby="apply-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="apply-heading">Apply to become a <em>JoinMaxLifeMD</em> partner</h2>
+        <p>It takes less than 3 minutes. We review every application within 48 hours.</p>
+      </div>
+      <div class="form-card">
+        <form id="affiliate-form" novalidate>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="first-name">First Name <span class="req">*</span></label>
+              <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Jane" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name <span class="req">*</span></label>
+              <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Smith" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="jane@yourpractice.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="business-name">Business Name <span class="req">*</span></label>
+              <input type="text" id="business-name" name="business_name" class="form-control" placeholder="Your Practice Name" required>
+            </div>
+            <div class="form-group">
+              <label for="website">Business Website <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
+              <input type="url" id="website" name="website" class="form-control" placeholder="https://yourpractice.com">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="business-type">Business Type <span class="req">*</span></label>
+              <select id="business-type" name="business_type" class="form-control" required>
+                <option value="" disabled selected>Select your business type</option>
+                <option>Chiropractic Practice</option>
+                <option>Gym / Fitness Studio</option>
+                <option>Personal Training</option>
+                <option>Med Spa / Aesthetics</option>
+                <option>Wellness Coaching</option>
+                <option>Physical Therapy</option>
+                <option>Naturopath / Nutritionist</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="state">State <span class="req">*</span></label>
+              <select id="state" name="state" class="form-control" required>
+                <option value="" disabled selected>Select your state</option>
+                <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+                <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+                <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
+                <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
+                <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
+                <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
+                <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+                <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
+                <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                <option>Wisconsin</option><option>Wyoming</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="patient-volume">Estimated Number of Patients / Members / Clients <span class="req">*</span></label>
+            <select id="patient-volume" name="patient_volume" class="form-control" required>
+              <option value="" disabled selected>Select an estimate</option>
+              <option>Under 50</option>
+              <option>50–100</option>
+              <option>100–250</option>
+              <option>250–500</option>
+              <option>500+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="referral-source">How did you hear about JoinMaxLifeMD? <span class="req">*</span></label>
+            <select id="referral-source" name="referral_source" class="form-control" required>
+              <option value="" disabled selected>Select an option</option>
+              <option>Google Search</option>
+              <option>Social Media</option>
+              <option>Referral from Another Partner</option>
+              <option>Industry Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="additional-info">Anything else you'd like us to know? <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
+            <textarea id="additional-info" name="additional_info" class="form-control" rows="3" placeholder="Tell us about your practice, patient demographics, or any questions you have..."></textarea>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the JoinMaxLifeMD Affiliate Program Terms &amp; Conditions and understand that as an affiliate I will not provide medical advice, diagnose, prescribe, or treat patients. <span class="req">*</span></label>
+          </div>
+
+          <button type="submit" class="btn btn-coral btn-submit">Submit Application</button>
+        </form>
+
+        <div class="form-success" id="form-success" role="alert" aria-live="polite">
+          <div class="form-success-icon">🎉</div>
+          <h3>Application received!</h3>
+          <p>We'll review your information and be in touch within 48 hours.<br>Check your email for next steps.</p>
+        </div>
+      </div>
+
+      <div class="form-trust-bar" role="list" aria-label="Program guarantees">
+        <span class="form-trust-item" role="listitem">Free to join</span>
+        <span class="form-trust-sep" aria-hidden="true">·</span>
+        <span class="form-trust-item" role="listitem">No medical license required</span>
+        <span class="form-trust-sep" aria-hidden="true">·</span>
+        <span class="form-trust-item" role="listitem">47 states</span>
+        <span class="form-trust-sep" aria-hidden="true">·</span>
+        <span class="form-trust-item" role="listitem">HIPAA compliant</span>
+        <span class="form-trust-sep" aria-hidden="true">·</span>
+        <span class="form-trust-item" role="listitem">Recurring commissions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+  ============================================================ -->
+  <section id="final-cta" aria-labelledby="cta-heading">
+    <h2 id="cta-heading">Questions before you apply?</h2>
+    <p>Schedule a free 15-minute consultation with our affiliate team. We'll walk you through the program, answer your questions, and help you decide if JoinMaxLifeMD is right for your practice.</p>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/affiliateconsultationmaxlife" target="_blank" rel="noopener noreferrer" class="btn btn-coral btn-lg">Schedule a Free Consultation</a>
+    <p class="final-cta-secondary">Or email us at <a href="mailto:affiliates@maxlifemdrx.com">affiliates@maxlifemdrx.com</a></p>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Join<span>MaxLifeMD</span></div>
+          <p style="font-size:13px;margin-top:8px;max-width:280px;color:rgba(255,255,255,0.5)">The B2B affiliate program for wellness professionals.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="mailto:affiliates@maxlifemdrx.com">Contact Us</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Telehealth Consent</a></li>
+          </ul>
+        </nav>
+        <div>
+          <img
+            src="https://static.legitscript.com/seals/38004082.png"
+            alt="LegitScript Approved"
+            height="60"
+            loading="lazy"
+          >
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 JoinMaxLifeMD. All rights reserved.</p>
+        <p class="footer-disclaimer">JoinMaxLifeMD is a partner program of MaxLifeMD, a telemedicine platform that connects patients with licensed healthcare providers. Affiliate partners do not provide medical services. All medical decisions, including treatment and prescriptions, are at the sole discretion of the prescribing provider. Payment does not guarantee the prescribing or dispensing of medication.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ─── Sticky Nav ──────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // ─── Mobile Menu ─────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ─── Smooth Scroll ───────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = navbar.offsetHeight + 8;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // ─── Active Nav Highlighting ─────────────────────────────────
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ─── Earnings Calculator ─────────────────────────────────────
+    const slider = document.getElementById('patient-slider');
+    const patientCount = document.getElementById('patient-count');
+    const monthlyEl = document.getElementById('monthly-earnings');
+    const annualEl = document.getElementById('annual-earnings');
+    const tierNameEl = document.getElementById('calc-tier-name');
+    const tierRateEl = document.getElementById('calc-tier-rate');
+
+    function getTier(n) {
+      if (n <= 10) return { name: 'Starter Tier', rate: 25 };
+      if (n <= 50) return { name: 'Pro Tier', rate: 35 };
+      return { name: 'Elite Tier', rate: 50 };
+    }
+
+    function formatCurrency(n) {
+      return '$' + n.toLocaleString('en-US');
+    }
+
+    function updateCalculator() {
+      const n = parseInt(slider.value, 10);
+      const tier = getTier(n);
+      const monthly = n * tier.rate;
+      const annual = monthly * 12;
+
+      patientCount.textContent = n;
+      monthlyEl.textContent = formatCurrency(monthly);
+      annualEl.textContent = formatCurrency(annual);
+      tierNameEl.textContent = tier.name;
+      tierRateEl.textContent = `$${tier.rate} per patient / month`;
+      slider.setAttribute('aria-valuenow', n);
+
+      // Update slider fill gradient
+      const pct = ((n - 1) / 99) * 100;
+      slider.style.background = `linear-gradient(to right, var(--accent-coral) ${pct}%, var(--border-light) ${pct}%)`;
+    }
+
+    slider.addEventListener('input', updateCalculator);
+    updateCalculator();
+
+    // ─── FAQ Accordion ───────────────────────────────────────────
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('open');
+          q.setAttribute('aria-expanded', 'false');
+          q.nextElementSibling.style.maxHeight = null;
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          btn.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // ─── Form Submission ─────────────────────────────────────────
+    const form = document.getElementById('affiliate-form');
+    const successMsg = document.getElementById('form-success');
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      // Basic validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let valid = true;
+      requiredFields.forEach(field => {
+        field.style.borderColor = '';
+        if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+          field.style.borderColor = 'var(--accent-coral)';
+          if (valid) field.focus();
+          valid = false;
+        }
+      });
+      if (!valid) return;
+
+      // Collect form data
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      // Submit to placeholder webhook (replace URL before going live)
+      const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/PLACEHOLDER';
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          mode: 'no-cors'
+        });
+      } catch (_) {
+        // Silent fail — show success regardless (webhook handles backend)
+      }
+
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Clear red border on input
+    form.querySelectorAll('.form-control, input[type="checkbox"]').forEach(field => {
+      field.addEventListener('input', () => { field.style.borderColor = ''; });
+    });
+  </script>
+</body>
+</html>
