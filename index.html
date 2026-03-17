@@ -150,13 +150,26 @@
       margin: 0 auto;
     }
     .nav-logo {
-      font-family: var(--font-sans);
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
     }
-    .nav-logo span { color: var(--accent-gold); }
+    .nav-logo-text {
+      font-family: var(--font-sans);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--accent-gold);
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-right: 3px;
+    }
+    .nav-logo-img {
+      width: 140px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
     .nav-links {
       display: flex;
       align-items: center;
@@ -832,12 +845,16 @@
       margin-bottom: 32px;
     }
     .footer-logo {
-      font-family: var(--font-sans);
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0;
     }
-    .footer-logo span { color: var(--accent-gold); }
+    .footer-logo .nav-logo-text {
+      font-size: 24px;
+    }
+    .footer-logo .nav-logo-img {
+      width: 150px;
+    }
     .footer-links {
       display: flex;
       flex-wrap: wrap;
@@ -915,7 +932,10 @@
   ============================================================ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Join<span>MaxLifeMD</span></a>
+      <a href="#" class="nav-logo" aria-label="JoinMaxLifeMD Home">
+        <span class="nav-logo-text">Join</span>
+        <img class="nav-logo-img" src="https://maxlifemdrx.com/wp-content/uploads/2024/06/MaxLife-MD-Logo-Transparent-BG-1-1024x256.png" alt="MaxLifeMD" width="140" height="35">
+      </a>
       <ul class="nav-links" role="list">
         <li><a href="#why-join">Why Join</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -1464,7 +1484,10 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-logo">Join<span>MaxLifeMD</span></div>
+          <div class="footer-logo">
+            <span class="nav-logo-text">Join</span>
+            <img class="nav-logo-img" src="https://maxlifemdrx.com/wp-content/uploads/2024/06/MaxLife-MD-Logo-Transparent-BG-1-1024x256.png" alt="MaxLifeMD" width="150" height="38" loading="lazy">
+          </div>
           <p style="font-size:13px;margin-top:8px;max-width:280px;color:rgba(255,255,255,0.5)">The B2B affiliate program for wellness professionals.</p>
         </div>
         <nav aria-label="Footer navigation">
