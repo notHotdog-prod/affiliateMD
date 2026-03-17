@@ -745,78 +745,14 @@
        APPLICATION FORM
     ============================================= */
     #apply { background: var(--bg-warm); }
-    .form-card {
-      max-width: 780px;
-      margin: 0 auto;
-      background: var(--card-white);
-      border: 1px solid var(--border-light);
-      border-radius: 16px;
-      padding: 44px 44px 40px;
-      box-shadow: var(--shadow-card);
-    }
-    .form-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-    .form-group label .req { color: var(--accent-coral); }
-    .form-control {
+    .monday-embed {
       width: 100%;
-      padding: 11px 14px;
-      font-size: 15px;
-      font-family: var(--font-sans);
-      color: var(--text-primary);
-      background: var(--card-white);
-      border: 1px solid var(--border-light);
-      border-radius: 8px;
-      transition: border-color var(--transition), box-shadow var(--transition);
-      outline: none;
+      min-height: 900px;
+      border: none;
+      border-radius: 12px;
+      background: transparent;
+      display: block;
     }
-    .form-control:focus {
-      border-color: var(--brand-navy-light);
-      box-shadow: 0 0 0 3px rgba(42,111,142,0.12);
-    }
-    textarea.form-control { resize: vertical; min-height: 80px; }
-    .form-check {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .form-check input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      accent-color: var(--accent-coral);
-      cursor: pointer;
-    }
-    .form-check label { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-    .btn-submit {
-      width: 100%;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 700;
-    }
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .form-success-icon { font-size: 48px; margin-bottom: 16px; }
-    .form-success h3 { color: var(--brand-navy); margin-bottom: 10px; font-family: var(--font-serif); font-size: 24px; }
-    .form-success p { color: var(--text-muted); font-size: 15px; }
     .form-trust-bar {
       display: flex;
       justify-content: center;
@@ -930,9 +866,7 @@
       .partner-cards { grid-template-columns: 1fr 1fr; }
       .features-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
-      .form-card { padding: 28px 20px; }
-      .form-grid-2 { grid-template-columns: 1fr; }
-      .calc-wrapper { padding: 28px 20px; }
+.calc-wrapper { padding: 28px 20px; }
       .calc-results { grid-template-columns: 1fr 1fr; }
       .footer-top { flex-direction: column; }
       .footer-bottom { flex-direction: column; }
@@ -1469,121 +1403,13 @@
         <h2 id="apply-heading">Apply to become a <em>JoinMaxLifeMD</em> partner</h2>
         <p>It takes less than 3 minutes. We review every application within 48 hours.</p>
       </div>
-      <div class="form-card">
-        <form id="affiliate-form" novalidate>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="first-name">First Name <span class="req">*</span></label>
-              <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Jane" required autocomplete="given-name">
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name <span class="req">*</span></label>
-              <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Smith" required autocomplete="family-name">
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="email">Email Address <span class="req">*</span></label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="jane@yourpractice.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" required autocomplete="tel">
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="business-name">Business Name <span class="req">*</span></label>
-              <input type="text" id="business-name" name="business_name" class="form-control" placeholder="Your Practice Name" required>
-            </div>
-            <div class="form-group">
-              <label for="website">Business Website <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
-              <input type="url" id="website" name="website" class="form-control" placeholder="https://yourpractice.com">
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label for="business-type">Business Type <span class="req">*</span></label>
-              <select id="business-type" name="business_type" class="form-control" required>
-                <option value="" disabled selected>Select your business type</option>
-                <option>Chiropractic Practice</option>
-                <option>Gym / Fitness Studio</option>
-                <option>Personal Training</option>
-                <option>Med Spa / Aesthetics</option>
-                <option>Wellness Coaching</option>
-                <option>Physical Therapy</option>
-                <option>Naturopath / Nutritionist</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="state">State <span class="req">*</span></label>
-              <select id="state" name="state" class="form-control" required>
-                <option value="" disabled selected>Select your state</option>
-                <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
-                <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
-                <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
-                <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
-                <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
-                <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
-                <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
-                <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
-                <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
-                <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
-                <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
-                <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
-                <option>Wisconsin</option><option>Wyoming</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="patient-volume">Estimated Number of Patients / Members / Clients <span class="req">*</span></label>
-            <select id="patient-volume" name="patient_volume" class="form-control" required>
-              <option value="" disabled selected>Select an estimate</option>
-              <option>Under 50</option>
-              <option>50–100</option>
-              <option>100–250</option>
-              <option>250–500</option>
-              <option>500+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="referral-source">How did you hear about JoinMaxLifeMD? <span class="req">*</span></label>
-            <select id="referral-source" name="referral_source" class="form-control" required>
-              <option value="" disabled selected>Select an option</option>
-              <option>Google Search</option>
-              <option>Social Media</option>
-              <option>Referral from Another Partner</option>
-              <option>Industry Event</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="additional-info">Anything else you'd like us to know? <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
-            <textarea id="additional-info" name="additional_info" class="form-control" rows="3" placeholder="Tell us about your practice, patient demographics, or any questions you have..."></textarea>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the JoinMaxLifeMD Affiliate Program Terms &amp; Conditions and understand that as an affiliate I will not provide medical advice, diagnose, prescribe, or treat patients. <span class="req">*</span></label>
-          </div>
-
-          <button type="submit" class="btn btn-coral btn-submit">Submit Application</button>
-        </form>
-
-        <div class="form-success" id="form-success" role="alert" aria-live="polite">
-          <div class="form-success-icon">🎉</div>
-          <h3>Application received!</h3>
-          <p>We'll review your information and be in touch within 48 hours.<br>Check your email for next steps.</p>
-        </div>
-      </div>
+      <iframe
+        class="monday-embed"
+        src="https://forms.monday.com/forms/c3fba7970987b47ab0690b0d60a0803f?r=use1"
+        title="JoinMaxLifeMD Partner Application"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
 
       <div class="form-trust-bar" role="list" aria-label="Program guarantees">
         <span class="form-trust-item" role="listitem">Free to join</span>
@@ -1764,52 +1590,6 @@
       });
     });
 
-    // ─── Form Submission ─────────────────────────────────────────
-    const form = document.getElementById('affiliate-form');
-    const successMsg = document.getElementById('form-success');
-
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-
-      // Basic validation
-      const requiredFields = form.querySelectorAll('[required]');
-      let valid = true;
-      requiredFields.forEach(field => {
-        field.style.borderColor = '';
-        if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
-          field.style.borderColor = 'var(--accent-coral)';
-          if (valid) field.focus();
-          valid = false;
-        }
-      });
-      if (!valid) return;
-
-      // Collect form data
-      const data = Object.fromEntries(new FormData(form).entries());
-
-      // Submit to placeholder webhook (replace URL before going live)
-      const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/PLACEHOLDER';
-
-      try {
-        await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-          mode: 'no-cors'
-        });
-      } catch (_) {
-        // Silent fail — show success regardless (webhook handles backend)
-      }
-
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-
-    // Clear red border on input
-    form.querySelectorAll('.form-control, input[type="checkbox"]').forEach(field => {
-      field.addEventListener('input', () => { field.style.borderColor = ''; });
-    });
   </script>
 </body>
 </html>
