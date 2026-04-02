@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — JoinMaxLifeMD</title>
+  <meta name="description" content="Privacy Policy for JoinMaxLifeMD. We protect your information and comply with healthcare and privacy regulations.">
+  <link rel="icon" type="image/png" href="maxlifemd-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #3c553d;
+      --brand-navy-dark: #2a392b;
+      --brand-navy-light: #4a6a4b;
+      --accent-coral: #c49b35;
+      --accent-gold: #d4a843;
+      --bg-warm: #faf9ef;
+      --card-white: #FFFFFF;
+      --text-primary: #1a1a1a;
+      --text-muted: #525252;
+      --border-light: #e6ede6;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --transition: 0.25s ease;
+      --radius-card: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--card-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--brand-navy);
+    }
+    h1 { font-size: 2.4rem; margin-bottom: 24px; }
+    h2 { font-size: 1.8rem; margin-bottom: 24px; margin-top: 40px; }
+    h3 { font-size: 1.2rem; margin-bottom: 16px; margin-top: 32px; }
+    p { line-height: 1.7; margin-bottom: 16px; color: var(--text-muted); }
+    strong { color: var(--text-primary); }
+    ul { margin: 16px 0 24px 24px; color: var(--text-muted); }
+    ul li { margin-bottom: 12px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--card-white); border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    .nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--brand-navy); }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--brand-navy); }
+    .nav-links a.active { color: var(--accent-coral); font-weight: 600; }
+    .nav-cta {
+      background: var(--accent-gold) !important; color: var(--brand-navy) !important;
+      padding: 10px 22px !important; border-radius: 6px !important; font-weight: 600 !important;
+      transition: opacity var(--transition) !important;
+    }
+    .nav-cta:hover { opacity: 0.88 !important; }
+
+    /* HERO */
+    .hero { background: var(--bg-warm); min-height: 60vh; display: flex; align-items: center; padding: 100px 0 80px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    .hero-sub { font-size: 1.1rem; max-width: 600px; margin-bottom: 32px; }
+
+    /* CONTENT */
+    .content { padding: 60px 0; }
+    .content-max { max-width: 800px; margin: 0 auto; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border-light); padding: 60px 0 24px; background: var(--bg-warm); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-brand { max-width: 280px; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+    .footer-col h4 { margin-bottom: 20px; color: var(--brand-navy); font-weight: 600; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color var(--transition); }
+    .footer-col a:hover { color: var(--accent-coral); }
+    .footer-newsletter { margin: 40px 0; padding: 40px; background: rgba(212, 168, 67, 0.08); border: 1px solid var(--border-light); border-radius: 8px; max-width: 600px; }
+    .footer-newsletter h4 { color: var(--brand-navy); margin-bottom: 12px; }
+    .footer-newsletter p { margin-bottom: 20px; }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input { flex: 1; background: var(--card-white); border: 1px solid var(--border-light); color: var(--text-primary); padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; }
+    .newsletter-form button { background: var(--accent-gold); color: var(--brand-navy); padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity var(--transition); }
+    .newsletter-form button:hover { opacity: 0.9; }
+    .footer-bottom { padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.85rem; }
+
+    em { color: var(--accent-gold); font-style: normal; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MaxLifeMD Affiliates</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#program">Program</a></li>
+      <li><a href="index.html#benefits">Benefits</a></li>
+      <li><a href="privacy.html" class="active">Privacy</a></li>
+    </ul>
+    <a href="index.html#join" class="nav-cta">Join Program</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div style="max-width: 700px;">
+      <span style="display: inline-block; color: var(--accent-coral); font-family: var(--font-serif); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.1em; margin-bottom: 16px;">PRIVACY & TRUST</span>
+      <h1>Your Data is <em>Protected</em></h1>
+      <p class="hero-sub">We safeguard your information and comply with healthcare privacy laws and federal regulations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+  <div class="container content-max">
+
+    <h2>Privacy Policy</h2>
+    <p style="color: #888; margin-bottom: 32px;">Effective Date: April 2, 2026</p>
+
+    <h3>1. Information We Collect</h3>
+    <p>When you join our affiliate program or interact with our platform, we collect:</p>
+    <ul>
+      <li>Your name, email, phone, and business information</li>
+      <li>Professional credentials (license numbers, certifications)</li>
+      <li>Business details (practice type, patient volume)</li>
+      <li>Bank and payment information for commission processing</li>
+      <li>Referral and patient interaction data (anonymized)</li>
+      <li>Website analytics and engagement metrics</li>
+      <li>Communication records and support interactions</li>
+    </ul>
+
+    <h3>2. How We Use Your Information</h3>
+    <p>We use your information to:</p>
+    <ul>
+      <li>Manage your affiliate account and program participation</li>
+      <li>Process and pay commissions accurately</li>
+      <li>Track referrals and performance metrics</li>
+      <li>Send program updates and marketing materials</li>
+      <li>Provide customer support and technical assistance</li>
+      <li>Conduct analytics to improve our program</li>
+      <li>Comply with healthcare and regulatory requirements</li>
+    </ul>
+
+    <h3>3. How We Share Your Information</h3>
+    <p>We <strong>do not sell or trade</strong> your personal information. We may share data with:</p>
+    <ul>
+      <li>MaxLifeMD and its healthcare partners for program operations</li>
+      <li>Payment processors and financial institutions for commissions</li>
+      <li>Service providers (analytics, hosting, customer support)</li>
+      <li>Regulatory agencies and healthcare authorities when required</li>
+      <li>Professional advisors for compliance matters</li>
+    </ul>
+
+    <h3>4. Cookies and Tracking Technologies</h3>
+    <p>Our platform uses cookies and similar technologies to enhance your experience, remember preferences, and track program performance. These help us understand how you use our affiliate portal and optimize functionality. You can manage cookie settings in your browser preferences.</p>
+
+    <h3>5. Your Privacy Rights</h3>
+    <p>Under New Jersey privacy laws and federal regulations, you have the right to:</p>
+    <ul>
+      <li>Access and review your personal information</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your information where permitted</li>
+      <li>Opt out of promotional communications</li>
+      <li>Receive your data in portable format</li>
+    </ul>
+    <p>To exercise these rights, contact us at <strong>hello@joinmaxlifemd.com</strong> or <strong>732-484-3000</strong>.</p>
+
+    <h3>6. Healthcare Privacy and HIPAA Compliance</h3>
+    <p>As we handle health-related referrals, we maintain strict confidentiality of any patient information. We comply with healthcare privacy regulations and do not disclose protected health information without proper authorization. All referral data is processed securely.</p>
+
+    <h3>7. Data Security</h3>
+    <p>We implement encryption, secure servers, firewalls, and restricted access controls to protect your information. We follow industry best practices for data protection. However, no system is completely secure. We encourage strong passwords and immediate reporting of any suspicious activity.</p>
+
+    <h3>8. Children's Privacy (COPPA)</h3>
+    <p>Our affiliate program is for healthcare professionals and business owners, not children under 13. We do not knowingly collect information from children. If we discover that a child has submitted information, we will delete it immediately. Parents or guardians may request removal by contacting us.</p>
+
+    <h3>9. Changes to This Policy</h3>
+    <p>We may update this policy as our practices evolve. Changes will be posted with an updated effective date, and your continued participation indicates acceptance of the updated policy.</p>
+
+    <h3>10. Contact Us</h3>
+    <p>For privacy questions or data requests:</p>
+    <ul>
+      <li><strong>Email:</strong> hello@joinmaxlifemd.com</li>
+      <li><strong>Phone:</strong> 732-484-3000</li>
+      <li><strong>Location:</strong> New Jersey, USA</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--brand-navy);">MaxLifeMD Affiliates</a>
+        <p>Earn recurring revenue referring patients to telemedicine HRT and wellness therapy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Program</h4>
+        <ul>
+          <li><a href="#program">How It Works</a></li>
+          <li><a href="#benefits">Affiliate Benefits</a></li>
+          <li><a href="#commission">Commission Structure</a></li>
+          <li><a href="#join">Join Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Affiliate Updates</h4>
+      <p>Get program tips and earnings insights.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 12px;">By subscribing, you agree to our Privacy Policy.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JoinMaxLifeMD. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
