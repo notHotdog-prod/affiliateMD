@@ -1870,7 +1870,7 @@
         phone: document.getElementById('contact-phone').value,
         company: document.getElementById('contact-company')?.value || '',
         message: document.getElementById('contact-message').value,
-        source: 'JoinMaxLifeMD',
+        source: 'JoinMaxLifeMD Website',
         entryPoint: 'Contact Form'
       };
 
@@ -1916,7 +1916,7 @@
 
       const payload = {
         email: input.value,
-        source: 'JoinMaxLifeMD - Newsletter'
+        source: 'JoinMaxLifeMD Website - Newsletter'
       };
 
       try {
@@ -1964,7 +1964,7 @@
   };
 })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", { origin: "https://cal.com" });
-Cal("floatingButton", { calLink: "letsgrowletsgo", buttonText: "Book a Consultation", buttonColor: "#3c553d", buttonTextColor: "#ffffff", buttonPosition: "bottom-right" });
+Cal("floatingButton", { calLink: "letsgrowletsgo?metadata[source]=JoinMaxLifeMD Website", buttonText: "Book a Consultation", buttonColor: "#3c553d", buttonTextColor: "#ffffff", buttonPosition: "bottom-right" });
 Cal("ui", { theme: "light", styles: { branding: { brandColor: "#3c553d" } } });
 </script>
 
